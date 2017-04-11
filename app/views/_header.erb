@@ -3,7 +3,7 @@
   <nav>
     <% if logged_in? %>
       <p>Welcome back, <%= current_user.username %></p> | 
-      <form action ="/sessions" method="post">
+      <form action ="/sessions/<%= current_user.id %>" method="POST">
         <input type="hidden" name="_method" value="DELETE">
         <input type="submit" value="Logout">
       </form>
