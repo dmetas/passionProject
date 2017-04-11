@@ -1,1 +1,13 @@
-new.erb
+<h2>Register a New User</h2>
+
+<form id="reg-form" action="/users" method="POST">
+  <label for="reg-username">Username:</label><br>
+  <input type="text" name="username" id="reg-username"><br><br>
+  <label for="reg-email">E-mail Address:</label><br>
+  <input type="text" name="email" id="reg-email"><br><br>
+  <label for="reg-password">Password:</label><br>
+  <input type="text" name="password" id="reg-password"><br><br>
+  <label for="reg-password-confirm">Confirm Password:</label><br>
+  <input type="text" id="reg-password-confirm"><br><br>
+  <input type="submit" value="Sign Up">
+</form>
