@@ -1,0 +1,15 @@
+<div class="page-header">
+  <h1><a href="/">Dungeons & Dragons Creation App thing</h1>
+  <nav>
+    <% if logged_in? %>
+      <p>Welcome back, <%= current_user.name %></p> | 
+      <form action ="/sessions" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Logout">
+      </form>
+    <% else%>
+      <a href ="/sessions/new">Login</a> | 
+      <a href="/users/new">Register</a>
+    <% end %>
+  </nav>
+</div>
