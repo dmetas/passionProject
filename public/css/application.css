@@ -13,3 +13,16 @@ nav{
 .page-header h1 a{
   color:inherit;
 }
+
+#logout-button{
+  background:none!important;
+  color:inherit;
+  border:none; 
+  padding:0!important;
+  font: inherit;
+  cursor: pointer;
+}
+
+#logout-form{
+  display: inline;
+}

@@ -2,10 +2,10 @@
   <h1><a href="/">Dungeons & Dragons Creation App thing</h1>
   <nav>
     <% if logged_in? %>
-      <p>Welcome back, <%= current_user.username %></p> | 
-      <form action ="/sessions/<%= current_user.id %>" method="POST">
+      Welcome back, <%= current_user.username %> | 
+      <form action ="/sessions/<%= current_user.id %>" method="POST" id="logout-form">
         <input type="hidden" name="_method" value="DELETE">
-        <input type="submit" value="Logout">
+        <input type="submit" value="Logout" id="logout-button">
       </form>
     <% else%>
       <a href ="/sessions/new">Login</a> | 
