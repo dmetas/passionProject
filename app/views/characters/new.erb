@@ -1,0 +1,49 @@
+<form action='/users/:user_id/characters/:id' method="POST">
+  <ul>
+    <li><input type="text" name="character[name]" placeholder="name"></li> 
+    <li><select name="character[class]">
+      <option value="Barbarian">Barbarian</option>
+      <option value="Bard">Bard</option>
+      <option value="Cleric">Cleric</option>
+      <option value="Druid">Druid</option>
+      <option value="Fighter">Fighter</option>
+      <option value="Monk">Monk</option>
+      <option value="Paladin">Paladin</option>
+      <option value="Ranger">Ranger</option>
+      <option value="Rogue">Rogue</option>
+      <option value="Sorcerer">Sorcerer</option>
+      <option value="Warlock">Warlock</option>
+      <option value="Wizard">Wizard</option>
+    </select></li>
+    <li><select name="character[race]">
+      <option value="Dragonborn">Dragonborn</option>
+      <option value="Dwarf">Dwarf</option>
+      <option value="Elf">Elf</option>
+      <option value="Gnome">Gnome</option>
+      <option value="Half-Elf">Half-Elf</option>
+      <option value="Half-Orc">Half-Orc</option>
+      <option value="Halfling">Halfling</option>
+      <option value="Human">Human</option>
+      <option value="Tiefling">Tiefling</option>
+    </select></li>
+    <li><select name='character[alignment]'>
+      <option value="Lawful Good">Lawful Good</option>
+      <option value="Neutral Good">Neutral Good</option>
+      <option value="Chaotic Good">Chaotic Good</option>
+      <option value="Lawful Neutral">Lawful Neutral</option>
+      <option value="(True) Neutral">(True) Neutral</option>
+      <option value="Chaotic Neutral">Chaotic Neutral</option>
+      <option value="Lawful Evil">Lawful Evil</option>
+      <option value="Neutral Evil">Neutral Evil</option>
+      <option value="Chaotic Evil">Chaotic Evil</option>
+    </select></li>
+    <textarea name="character[background]" placeholder="Your awesome background story here!"></textarea>
+    <li><input type="integer" name="character[strength]" placeholder="strength"></li> 
+    <li><input type="integer" name="character[dexterity]" placeholder="dexterity"></li> 
+    <li><input type="integer" name="character[constitution]" placeholder="constitution"></li> 
+    <li><input type="integer" name="character[intelligence]" placeholder="intelligence"></li> 
+    <li><input type="integer" name="character[wisdom]" placeholder="wisdom"></li> 
+    <li><input type="integer" name="character[charisma]" placeholder="charisma"></li> 
+    <li><input type="submit" value="Create"></li> 
+  </ul>
+</form>
