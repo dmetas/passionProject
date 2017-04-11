@@ -6,6 +6,20 @@ nav{
   text-align: right;
 }
 
+li{
+  list-style-type: none;
+  margin: 2px;
+}
+
+textarea{
+  width:300px;
+  height: 150px;
+}
+
+.errors-container{
+  color:red;
+}
+
 .page-header a {
   text-decoration: none;
 }
