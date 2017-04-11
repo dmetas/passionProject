@@ -1,7 +1,7 @@
-<form action='/users/:user_id/characters/:id' method="POST">
+<form action='/users/<%=current_user.id%>/characters' method="POST">
   <ul>
     <li><input type="text" name="character[name]" placeholder="name"></li> 
-    <li><select name="character[class]">
+    <li><select name="character[character_class]">
       <option value="Barbarian">Barbarian</option>
       <option value="Bard">Bard</option>
       <option value="Cleric">Cleric</option>

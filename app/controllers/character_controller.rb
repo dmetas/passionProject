@@ -12,7 +12,18 @@ get '/users/:user_id/characters/new' do
 end
 
 post '/users/:user_id/characters' do
-  redirect '/'
+  p "*" * 90
+  p params
+  p "*" * 90
+  @character = Character.new(params[:character])
+  p @character
+  @character.user_id = current_user.id
+  if @character.save
+    redirect "/users/#{current_user.id}"
+  else
+    @errors = @character.errors.full_messages
+    erb :'/characters/new'
+  end
 end
 
 get '/users/:user_id/characters/:id' do
