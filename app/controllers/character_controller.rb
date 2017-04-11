@@ -12,11 +12,7 @@ get '/users/:user_id/characters/new' do
 end
 
 post '/users/:user_id/characters' do
-  p "*" * 90
-  p params
-  p "*" * 90
   @character = Character.new(params[:character])
-  p @character
   @character.user_id = current_user.id
   if @character.save
     redirect "/users/#{current_user.id}"
@@ -27,7 +23,7 @@ post '/users/:user_id/characters' do
 end
 
 get '/users/:user_id/characters/:id' do
-  # @character = 
+  @character = Character.find(params[:id])
   erb :'/characters/show'
 end
 
