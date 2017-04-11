@@ -22,13 +22,3 @@ get '/users/:id' do
   @user_characters = @user.characters
   erb :'users/show'
 end
-
-get '/users/:id/edit'
-  erb :"users/edit"
-end
-
-put '/users/:id'
-end
-
-delete '/users:id'
-end
