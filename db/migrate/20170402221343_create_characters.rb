@@ -7,6 +7,7 @@ class CreateCharacters < ActiveRecord::Migration
   		t.string :alignment
   		t.string :background
 
+      t.integer :level
   		t.integer :strength
   		t.integer :dexterity
   		t.integer :constitution
@@ -14,7 +15,7 @@ class CreateCharacters < ActiveRecord::Migration
   		t.integer :wisdom
   		t.integer :charisma
 
-  		t.references :users
+  		t.references :user
     end
   end
 end

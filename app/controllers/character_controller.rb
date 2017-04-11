@@ -1,3 +1,8 @@
+before do
+  # find_by_user_id_and_project_id(params[:user_id],params[:project_id])
+  # @character = find_by()
+end
+
 get '/users/:user_id/characters' do
   erb :'characters/index'
 end
@@ -11,6 +16,7 @@ post '/users/:user_id/characters' do
 end
 
 get '/users/:user_id/characters/:id' do
+  @character = 
   erb :'/characters/show'
 end
 
@@ -22,4 +28,5 @@ put '/users/:user_id/characters/:id' do
 end
 
 delete '/users/:user_id/characters/:id' do
+
 end
