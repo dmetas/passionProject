@@ -1,0 +1,15 @@
+body{
+  margin: 2%;
+}
+
+nav{
+  text-align: right;
+}
+
+.page-header a {
+  text-decoration: none;
+}
+
+.page-header h1 a{
+  color:inherit;
+}
