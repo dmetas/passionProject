@@ -16,7 +16,7 @@ post '/users/:user_id/characters' do
 end
 
 get '/users/:user_id/characters/:id' do
-  @character = 
+  # @character = 
   erb :'/characters/show'
 end
 
