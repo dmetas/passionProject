@@ -1,5 +1,9 @@
 body{
   margin: 2%;
+  width: 70%;
+  font-family: 'Roboto', sans-serif;
+  background-color: #F5F5F5;
+  /*background-image: url("/images/stone-background-1.jpg");*/
 }
 
 nav{
@@ -11,21 +15,31 @@ li{
   margin: 2px;
 }
 
+
 textarea{
   width:300px;
   height: 150px;
+}
+
+td{
+  padding: 3px 8px;
+}
+
+.handwritten{
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 .errors-container{
   color:red;
 }
 
-.page-header a {
+a {
   text-decoration: none;
+  color:#801505
 }
 
 .page-header h1 a{
-  color:inherit;
+  color:#801505;
 }
 
 #logout-button{
