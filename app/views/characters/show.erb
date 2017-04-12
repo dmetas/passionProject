@@ -1,11 +1,37 @@
+
 <h3><%=@character.name%> <%=@character.race%> <%=@character.character_class%> </h3>
-<ul>
-  <li><%=@character.level%></li>
-  <li><%=@character.strength%></li>
-  <li><%=@character.dexterity%></li>
-  <li><%=@character.constitution%></li>
-  <li><%=@character.intelligence%></li>
-  <li><%=@character.wisdom%></li>
-  <li><%=@character.charisma%></li>
-</ul>
-<p><%=@character.background%></p>
+<table>
+  <tr>
+    <th>Stats</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>level</td>
+    <td><%=@character.level%></td>
+  </tr>
+  <tr>
+    <td>strength</td>
+    <td><%=@character.strength%></td>
+  </tr>
+  <tr>
+    <td>dexterity</td>
+    <td><%=@character.dexterity%></td>
+  </tr>
+  <tr>
+    <td>constitution</td>
+    <td><%=@character.constitution%></td>
+  </tr>
+  <tr>
+    <td>intelligence</td>
+    <td><%=@character.intelligence%></td>
+  </tr>
+  <tr>
+    <td>wisdom</td>
+    <td><%=@character.wisdom%></td>
+  </tr> 
+  <tr>
+    <td>charisma</td>
+    <td><%=@character.charisma%></td>
+  </tr>
+</table>
+<p>Background: <%=@character.background%></p>
