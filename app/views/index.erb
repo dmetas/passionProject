@@ -1,6 +1,5 @@
 
-
-<h3>login or register to start your adventure</h3>
-<center>
-<img class="resize" src="images/Dragon.jpg" >
-</center>
+<% if !logged_in? %>
+  <h3>login or register to start your adventure</h3>
+<% end %>
+<img class="resize dragon-img" src="images/Dragon.jpg" >

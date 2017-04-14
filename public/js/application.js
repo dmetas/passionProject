@@ -2,6 +2,7 @@ $(document).ready(function() {
   upVoteListener();
   downVoteListener();
   deleteCharListener();
+  updatePhotoListener();
 });
 
 var upVoteListener = function(){
@@ -60,5 +61,26 @@ var deleteCharListener = function(){
         top.location.href = url;
       })
     }
+  })
+}
+
+var updatePhotoListener = function(){
+  $("#new-char-class").on("change", function(){
+    var charClass = $(this).val();
+    var charImgObj = {
+      'Barbarian' : "<img src='/images/Barb.jpg'>",
+      'Bard' : "<img src='/images/Barb.jpg'>",
+      'Cleric' : "<img src='/images/cleric.jpg'>",
+      'Druid' : "<img src='/images/druid.jpg'>",
+      'Fighter' : "<img src='/images/fighter.jpg'>",
+      'Monk' : "<img src='/images/Monk.jpg'>",
+      'Paladin' : "<img src='/images/Paladin.jpg'>",
+      'Ranger' : "<img src='/images/Ranger.jpg'>",
+      'Rogue' : "<img src='/images/Rogue.jpg'>",
+      'Sorcerer' : "<img src='/images/sorcerer.jpg'>",
+      'Warlock' : "<img src='/images/warlock.jpg'>",
+      'Wizard' : "<img src='/images/warlock.jpg'>"
+    }
+    $(".char-img-div").find("img").replaceWith(charImgObj[charClass]);
   })
 }

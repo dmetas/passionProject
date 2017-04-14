@@ -6,6 +6,10 @@ body{
   /*background-image: url("/images/stone-background-1.jpg");*/
 }
 
+.page-content{
+  margin: 0 auto;
+}
+
 img.resize{
    max-width:75%;
    max-height:75%;
@@ -75,4 +79,22 @@ th{
 
 .new-char-stat{
   width: 30px;
+}
+
+.dragon-img{
+  display: block;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.char-stats-div{
+  float:left;
+  width:48%;
+}
+
+.char-img-div{
+  float:right;
+  width:48%;
+  text-align: right;
+  margin: 10px;
 }
