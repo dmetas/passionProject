@@ -13,6 +13,7 @@ gem 'activerecord', '~>4.2.0'
 gem 'rake'
 
 gem 'shotgun', '~>0.9.1'
+gem 'pry-byebug'
 
 gem 'httparty'
 
@@ -26,5 +27,4 @@ end
 group :test, :development do
   gem 'factory_girl'
   gem 'faker'
-  gem 'pry-byebug'
 end
