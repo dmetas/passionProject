@@ -17,8 +17,6 @@ var upVoteListener = function(){
       data: $form.serialize()
     })
 
-    console.log($request)
-
     $request.done(function(response){
       $form.closest("tr").find(".val_to_change").text(response)
     });

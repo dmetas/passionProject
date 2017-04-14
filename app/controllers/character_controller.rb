@@ -31,6 +31,26 @@ end
 get '/users/:user_id/characters/:id' do
   @character = Character.find(params[:id])
   @user = User.find(params[:user_id])
+
+  char_class = @character.character_class
+
+  class_img_hash = {
+      'Barbarian' => "/images/Barb.jpg",
+      'Bard' => "/images/Barb.jpg",
+      'Cleric' => "/images/cleric.jpg",
+      'Druid' => "/images/druid.jpg",
+      'Fighter' => "/images/fighter.jpg",
+      'Monk' => "/images/Monk.jpg",
+      'Paladin' => "/images/Paladin.jpg",
+      'Ranger' => "/images/Ranger.jpg",
+      'Rogue' => "/images/Rogue.jpg",
+      'Sorcerer' => "/images/sorcerer.jpg",
+      'Warlock' => "/images/warlock.jpg",
+      'Wizard' => "/images/warlock.jpg"
+    }
+
+    @class_img = class_img_hash[char_class]
+
   erb :'/characters/show'
 end
 
