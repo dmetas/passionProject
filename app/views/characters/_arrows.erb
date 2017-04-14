@@ -1,9 +1,11 @@
 <form class="upvote-form" action="/users/<%= @user.id %>/characters/<%= @character.id %>/upvote" method="POST">
 <input type="hidden" name="_method" value="PUT">
+<input type="hidden" name="attribute" value ="<%= attribute %>">
   <input type="submit" id="upvote-button" value="▲">
 </form>
 
 <form class="downvote-form" action="/users/<%= @user.id %>/characters/<%= @character.id %>/downvote" method="POST">
 <input type="hidden" name="_method" value="PUT">
+<input type="hidden" name="attribute" value ="<%= attribute %>">
   <input type="submit" id="downvote-button" value="▼">
 </form>
