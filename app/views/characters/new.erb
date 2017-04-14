@@ -1,21 +1,29 @@
 <form action='/users/<%=current_user.id%>/characters' method="POST">
-  <ul>
-    <li><input type="text" name="character[name]" placeholder="name"></li> 
-    <li><select name="character[character_class]">
-      <option value="Barbarian">Barbarian</option>
-      <option value="Bard">Bard</option>
-      <option value="Cleric">Cleric</option>
-      <option value="Druid">Druid</option>
-      <option value="Fighter">Fighter</option>
-      <option value="Monk">Monk</option>
-      <option value="Paladin">Paladin</option>
-      <option value="Ranger">Ranger</option>
-      <option value="Rogue">Rogue</option>
-      <option value="Sorcerer">Sorcerer</option>
-      <option value="Warlock">Warlock</option>
-      <option value="Wizard">Wizard</option>
-    </select></li>
-    <li><select name="character[race]">
+  <table>
+    <tr>
+      <th><label for="new-char-name">Name: </label></th>
+      <td><input type="text" id="new-char-name" name="character[name]"></td>
+    </tr> 
+    <tr>
+      <th><label for="new-char-class">Class: </label></th>
+      <td><select  id="new-char-class" name="character[character_class]">
+        <option value="Barbarian">Barbarian</option>
+        <option value="Bard">Bard</option>
+        <option value="Cleric">Cleric</option>
+        <option value="Druid">Druid</option>
+        <option value="Fighter">Fighter</option>
+        <option value="Monk">Monk</option>
+        <option value="Paladin">Paladin</option>
+        <option value="Ranger">Ranger</option>
+        <option value="Rogue">Rogue</option>
+        <option value="Sorcerer">Sorcerer</option>
+        <option value="Warlock">Warlock</option>
+        <option value="Wizard">Wizard</option>
+      </select></td>
+    </tr>
+    <tr>
+      <th><label for="new-char-race">Race: </label></th>
+      <td><select id="new-char-race" name="character[race]">
       <option value="Dragonborn">Dragonborn</option>
       <option value="Dwarf">Dwarf</option>
       <option value="Elf">Elf</option>
@@ -25,8 +33,11 @@
       <option value="Halfling">Halfling</option>
       <option value="Human">Human</option>
       <option value="Tiefling">Tiefling</option>
-    </select></li>
-    <li><select name='character[alignment]'>
+    </select></td>
+    </tr>
+    <tr>
+      <th><label for="new-char-alignment">Alignment: </label></th>
+      <td><select id="new-char-alignment" name='character[alignment]'>
       <option value="Lawful Good">Lawful Good</option>
       <option value="Neutral Good">Neutral Good</option>
       <option value="Chaotic Good">Chaotic Good</option>
@@ -36,15 +47,40 @@
       <option value="Lawful Evil">Lawful Evil</option>
       <option value="Neutral Evil">Neutral Evil</option>
       <option value="Chaotic Evil">Chaotic Evil</option>
-    </select></li>
-    <textarea name="character[background]" placeholder="Your awesome background story here!"></textarea>
-    <li><input type="integer" name="character[level]" placeholder="level"></li> 
-    <li><input type="integer" name="character[strength]" placeholder="strength"></li> 
-    <li><input type="integer" name="character[dexterity]" placeholder="dexterity"></li> 
-    <li><input type="integer" name="character[constitution]" placeholder="constitution"></li> 
-    <li><input type="integer" name="character[intelligence]" placeholder="intelligence"></li> 
-    <li><input type="integer" name="character[wisdom]" placeholder="wisdom"></li> 
-    <li><input type="integer" name="character[charisma]" placeholder="charisma"></li> 
-    <li><input type="submit" value="Create"></li> 
-  </ul>
+    </select></td>
+    </tr>
+    <tr>
+      <th><label for="new-char-lvl">Level: </label></th>
+      <td><input type="integer" id="new-char-lvl" class="new-char-stat" name="character[level]"></td>
+    </tr> 
+    <tr>
+      <th><label for="new-char-str">Strength: </label></th>
+      <td><input type="integer" id="new-char-str" class="new-char-stat" name="character[strength]"></td>
+    </tr> 
+    <tr>
+      <th><label for="new-char-dex">Dexterity: </label></th>
+      <td><input type="integer" id="new-char-dex" class="new-char-stat" name="character[dexterity]"></td>
+    </tr> 
+    <tr>
+      <th><label for="new-char-con">Constitution: </label></th>
+      <td><input type="integer" id="new-char-con" class="new-char-stat" name="character[constitution]"></td>
+    </tr> 
+    <tr>
+      <th><label for="new-char-int">Intelligence: </label></th>
+      <td><input type="integer" id="new-char-int" class="new-char-stat" name="character[intelligence]"></td>
+    </tr> 
+    <tr>
+      <th><label for="new-char-wis">Wisdom: </label></th>
+      <td><input type="integer" id="new-char-wis" class="new-char-stat" name="character[wisdom]"></td>
+    </tr> 
+    <tr>
+      <th><label for="new-char-cha">Charisma: </label></th>
+      <td><input type="integer" id="new-char-cha" class="new-char-stat" name="character[charisma]"></td>
+    </tr>
+    <tr>
+      <th><label for="new-char-background">Background: </label></th>
+      <td><textarea id="new-char-background" name="character[background]" placeholder="Your awesome background story here!"></textarea><br><br>
+      <input type="submit" value="Create"></td>
+    </tr>
+  </table>
 </form>
