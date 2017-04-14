@@ -24,6 +24,7 @@ end
 
 get '/users/:user_id/characters/:id' do
   @character = Character.find(params[:id])
+  @user = User.find(params[:user_id])
   erb :'/characters/show'
 end
 
@@ -31,9 +32,23 @@ get '/users/:user_id/characters/:id/edit' do
   erb :'charactes/edit'
 end
 
-put '/users/:user_id/characters/:id' do
+put '/users/:user_id/characters/:id/upvote' do
+  @user = User.find(params[:user_id])
+  @character = Character.find(params[:id])
+  @new_val = (@character.level + 1)
+  @character.update({level: @new_val})
+  redirect "/users/#{@user.id}/characters/#{@character.id}"
+end
+
+put '/users/:user_id/characters/:id/downvote' do
+  @user = User.find(params[:user_id])
+  @character = Character.find(params[:id])
+  @new_val = (@character.level - 1)
+  @character.update({level: @new_val})
+  redirect "/users/#{@user.id}/characters/#{@character.id}"
 end
 
 delete '/users/:user_id/characters/:id' do
 
 end
+
