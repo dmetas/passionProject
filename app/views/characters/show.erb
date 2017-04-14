@@ -1,48 +1,54 @@
+<div class="page-content">
 <h3><%=@character.name%> <%=@character.race%> <%=@character.character_class%> </h3>
-<table>
-  <tr>
-    <th>Stats</th>
-    <th>Value</th>
-  </tr>
-  <tr>
-    <td>level</td>
-    <td class="val_to_change"><%=@character.level%></td>
-    <td><%= erb :'characters/_arrows', locals: { attribute: 'level', attribute_val: @character.level, character: @character } %></td>
-  </tr>
-  <tr>
-    <td>strength</td>
-    <td class="val_to_change"><%=@character.strength%></td>
-    <td><%= erb :'characters/_arrows', locals: { attribute: 'strength', attribute_val: @character.strength, character: @character } %></td>
-  </tr>
-  <tr>
-    <td>dexterity</td>
-    <td class="val_to_change"><%=@character.dexterity%></td>
-    <td><%= erb :'characters/_arrows', locals: { attribute: 'dexterity', attribute_val: @character.dexterity, character: @character } %></td>
-  </tr>
-  <tr>
-    <td>constitution</td>
-    <td class="val_to_change"><%=@character.constitution%></td>
-    <td><%= erb :'characters/_arrows', locals: { attribute: 'constitution', attribute_val: @character.constitution, character: @character } %></td>
-  </tr>
-  <tr>
-    <td>intelligence</td>
-    <td class="val_to_change"><%=@character.intelligence%></td>
-    <td><%= erb :'characters/_arrows', locals: { attribute: 'intelligence', attribute_val: @character.intelligence, character: @character } %></td>
-  </tr>
-  <tr>
-    <td>wisdom</td>
-    <td class="val_to_change"><%=@character.wisdom%></td>
-    <td><%= erb :'characters/_arrows', locals: { attribute: 'wisdom', attribute_val: @character.wisdom, character: @character } %></td>
-  </tr> 
-  <tr>
-    <td>charisma</td>
-    <td class="val_to_change"><%=@character.charisma%></td>
-    <td><%= erb :'characters/_arrows', locals: { attribute: 'charisma', attribute_val: @character.charisma, character: @character } %></td>
-  </tr>
-</table>
-<p>Background: <%=@character.background%></p>
-
+<div class="char-stats-div">
+  <table>
+    <tr>
+      <th>Stats</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>level</td>
+      <td class="val_to_change handwritten"><%=@character.level%></td>
+      <td><%= erb :'characters/_arrows', locals: { attribute: 'level', attribute_val: @character.level, character: @character } %></td>
+    </tr>
+    <tr>
+      <td>strength</td>
+      <td class="val_to_change handwritten"><%=@character.strength%></td>
+      <td><%= erb :'characters/_arrows', locals: { attribute: 'strength', attribute_val: @character.strength, character: @character } %></td>
+    </tr>
+    <tr>
+      <td>dexterity</td>
+      <td class="val_to_change handwritten"><%=@character.dexterity%></td>
+      <td><%= erb :'characters/_arrows', locals: { attribute: 'dexterity', attribute_val: @character.dexterity, character: @character } %></td>
+    </tr>
+    <tr>
+      <td>constitution</td>
+      <td class="val_to_change handwritten"><%=@character.constitution%></td>
+      <td><%= erb :'characters/_arrows', locals: { attribute: 'constitution', attribute_val: @character.constitution, character: @character } %></td>
+    </tr>
+    <tr>
+      <td>intelligence</td>
+      <td class="val_to_change handwritten"><%=@character.intelligence%></td>
+      <td><%= erb :'characters/_arrows', locals: { attribute: 'intelligence', attribute_val: @character.intelligence, character: @character } %></td>
+    </tr>
+    <tr>
+      <td>wisdom</td>
+      <td class="val_to_change handwritten"><%=@character.wisdom%></td>
+      <td><%= erb :'characters/_arrows', locals: { attribute: 'wisdom', attribute_val: @character.wisdom, character: @character } %></td>
+    </tr> 
+    <tr>
+      <td>charisma</td>
+      <td class="val_to_change handwritten"><%=@character.charisma%></td>
+      <td><%= erb :'characters/_arrows', locals: { attribute: 'charisma', attribute_val: @character.charisma, character: @character } %></td>
+    </tr>
+  </table>
+<p>Background:  <span class="handwritten"><%=@character.background%></span></p>
 <form id="delete-char-form" action="/users/<%= @user.id %>/characters/<%= @character.id %>" method="POST">
   <input type="hidden" name="_method" value="DELETE">
   <input type="submit" value="Delete Character" id="delete-char-button">
 </form>
+</div>
+</div>
+
+<%= erb :'characters/_char_img' %>
+

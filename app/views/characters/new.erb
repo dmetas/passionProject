@@ -1,3 +1,5 @@
+<div class="page-content">
+<div class="char-stats-div">
 <form action='/users/<%=current_user.id%>/characters' method="POST">
   <table>
     <tr>
@@ -79,8 +81,13 @@
     </tr>
     <tr>
       <th><label for="new-char-background">Background: </label></th>
-      <td><textarea class="handwritten" id="new-char-background" name="character[background]" placeholder="Your awesome background story here!"></textarea><br><br></td>
+      <td>&nbsp;</td>
     </tr>
   </table>
+  <br>
+  <textarea class="handwritten" id="new-char-background" name="character[background]" placeholder="Your awesome background story here!"></textarea><br><br>
   <input type="submit" value="Create">
 </form>
+</div>
+</div>
+<%= erb :'characters/_char_img' %>
