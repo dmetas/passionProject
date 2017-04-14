@@ -14,21 +14,26 @@ get '/users/:user_id/characters/new' do
   @stat_roll4 = stat_roll
   @stat_roll5 = stat_roll
   @stat_roll6 = stat_roll
-  
-  erb :'/characters/new'
-end
 
-get 'http://5e-api.com/v1/races/:race' do
-  @race = params[:race]
-  # @racial_bonuses = []
-  # http://5e-api.com/v1/races/{race}
-  # grab value of "racial_bonus" key (value is an array of hashes)
-  # for each stat on the form, check for racial bonus and display
+  if request.xhr?
+
+    @race = params["race"]
+
+    @api = HTTParty.get("http://5e-api.com/v1/races/#{@race}")
+
+    @racial_bonuses_array = @api[0]["racial_bonus"]
+    @racial_bonuses_hash = Hash.new
+    @racial_bonuses_array.each {|hash| @racial_bonuses_hash[hash["name"]] = hash["bonus"]}
+    @racial_bonuses_hash.to_json
+  else
+    erb :'/characters/new'
+  end
 end
 
 post '/users/:user_id/characters' do
   @character = Character.new(params[:character])
   @character.user_id = current_user.id
+
   if @character.save
     redirect "/users/#{current_user.id}"
   else

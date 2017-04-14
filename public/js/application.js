@@ -91,9 +91,18 @@ var showBonusListener = function(){
 
     var $request = $.ajax({
       type: "GET",
-      url: 'http://5e-api.com/v1/races/' + charRace
+      url: window.location.pathname,
+      data: { "race": charRace }
     })
 
-    console.log($request)
+    $request.done(function(response){
+      $(".stat-bonus").text("   ")
+
+      var bonusesObj = JSON.parse(response);
+      for (var bonusAttr in bonusesObj) {
+        var bonusVal = bonusesObj[bonusAttr];
+        $("#" + bonusAttr).append(" + <span class='bonus-val'>" + bonusVal + "</span>")
+      }
+    })
   });
 }

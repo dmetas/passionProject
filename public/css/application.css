@@ -1,6 +1,6 @@
 body{
   margin: 2%;
-  width: 70%;
+  width: 80%;
   font-family: 'Roboto', sans-serif;
   background-color: #F5F5F5;
   /*background-image: url("/images/stone-background-1.jpg");*/
@@ -8,6 +8,7 @@ body{
 
 .page-content{
   margin: 0 auto;
+  margin-left: 10%
 }
 
 img.resize{
@@ -81,7 +82,7 @@ th{
 
 .dragon-img{
   display: block;
-  margin: 0 auto;
+  margin: 10% 20%;
   vertical-align: middle;
 }
 
@@ -92,7 +93,7 @@ th{
 
 .char-img-div{
   float:right;
-  width:48%;
+  width:40%;
   text-align: right;
   margin: 10px;
 }
