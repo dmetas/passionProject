@@ -2,11 +2,11 @@
   <table>
     <tr>
       <th><label for="new-char-name">Name: </label></th>
-      <td><input type="text" id="new-char-name" name="character[name]"></td>
+      <td><input type="text" class="handwritten" id="new-char-name" name="character[name]"></td>
     </tr> 
     <tr>
       <th><label for="new-char-class">Class: </label></th>
-      <td><select  id="new-char-class" name="character[character_class]">
+      <td><select class="handwritten" id="new-char-class" name="character[character_class]">
         <option value="Barbarian">Barbarian</option>
         <option value="Bard">Bard</option>
         <option value="Cleric">Cleric</option>
@@ -23,7 +23,7 @@
     </tr>
     <tr>
       <th><label for="new-char-race">Race: </label></th>
-      <td><select id="new-char-race" name="character[race]">
+      <td><select class="handwritten" id="new-char-race" name="character[race]">
       <option value="Dragonborn">Dragonborn</option>
       <option value="Dwarf">Dwarf</option>
       <option value="Elf">Elf</option>
@@ -37,7 +37,7 @@
     </tr>
     <tr>
       <th><label for="new-char-alignment">Alignment: </label></th>
-      <td><select id="new-char-alignment" name='character[alignment]'>
+      <td><select class="handwritten" id="new-char-alignment" name='character[alignment]'>
       <option value="Lawful Good">Lawful Good</option>
       <option value="Neutral Good">Neutral Good</option>
       <option value="Chaotic Good">Chaotic Good</option>
@@ -51,36 +51,36 @@
     </tr>
     <tr>
       <th><label for="new-char-lvl">Level: </label></th>
-      <td><input type="integer" id="new-char-lvl" class="new-char-stat" name="character[level]"></td>
+      <td><input type="integer" id="new-char-lvl" class="new-char-stat handwritten" maxlength=3 name="character[level]"></td>
     </tr> 
     <tr>
       <th><label for="new-char-str">Strength: </label></th>
-      <td><input type="integer" id="new-char-str" class="new-char-stat" name="character[strength]"></td>
+      <td><input type="integer" id="new-char-str" class="new-char-stat handwritten" maxlength=3 name="character[strength]"></td>
     </tr> 
     <tr>
       <th><label for="new-char-dex">Dexterity: </label></th>
-      <td><input type="integer" id="new-char-dex" class="new-char-stat" name="character[dexterity]"></td>
+      <td><input type="integer" id="new-char-dex" class="new-char-stat handwritten" maxlength=3 name="character[dexterity]"></td>
     </tr> 
     <tr>
       <th><label for="new-char-con">Constitution: </label></th>
-      <td><input type="integer" id="new-char-con" class="new-char-stat" name="character[constitution]"></td>
+      <td><input type="integer" id="new-char-con" class="new-char-stat handwritten" maxlength=3 name="character[constitution]"></td>
     </tr> 
     <tr>
       <th><label for="new-char-int">Intelligence: </label></th>
-      <td><input type="integer" id="new-char-int" class="new-char-stat" name="character[intelligence]"></td>
+      <td><input type="integer" id="new-char-int" class="new-char-stat handwritten" maxlength=3 name="character[intelligence]"></td>
     </tr> 
     <tr>
       <th><label for="new-char-wis">Wisdom: </label></th>
-      <td><input type="integer" id="new-char-wis" class="new-char-stat" name="character[wisdom]"></td>
+      <td><input type="integer" id="new-char-wis" class="new-char-stat handwritten" maxlength=3 name="character[wisdom]"></td>
     </tr> 
     <tr>
       <th><label for="new-char-cha">Charisma: </label></th>
-      <td><input type="integer" id="new-char-cha" class="new-char-stat" name="character[charisma]"></td>
+      <td><input type="integer" id="new-char-cha" class="new-char-stat handwritten" maxlength=3 name="character[charisma]"></td>
     </tr>
     <tr>
       <th><label for="new-char-background">Background: </label></th>
-      <td><textarea id="new-char-background" name="character[background]" placeholder="Your awesome background story here!"></textarea><br><br>
-      <input type="submit" value="Create"></td>
+      <td><textarea class="handwritten" id="new-char-background" name="character[background]" placeholder="Your awesome background story here!"></textarea><br><br></td>
     </tr>
   </table>
+  <input type="submit" value="Create">
 </form>
