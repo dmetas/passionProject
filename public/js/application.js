@@ -101,7 +101,7 @@ var showBonusListener = function(){
       var bonusesObj = JSON.parse(response);
       for (var bonusAttr in bonusesObj) {
         var bonusVal = bonusesObj[bonusAttr];
-        $("#" + bonusAttr).append("+ " + bonusVal)
+        $("#" + bonusAttr).append(" + <span class='bonus-val'>" + bonusVal + "</span>")
       }
     })
   });

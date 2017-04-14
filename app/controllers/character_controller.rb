@@ -33,6 +33,7 @@ end
 post '/users/:user_id/characters' do
   @character = Character.new(params[:character])
   @character.user_id = current_user.id
+
   if @character.save
     redirect "/users/#{current_user.id}"
   else
