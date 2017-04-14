@@ -77,7 +77,7 @@ var updatePhotoListener = function(){
       'Ranger' : "<img src='/images/Ranger.jpg'>",
       'Rogue' : "<img src='/images/Rogue.jpg'>",
       'Sorcerer' : "<img src='/images/sorcerer.jpg'>",
-      'Warlock' : "<img src='/images/warlock.jpg'>",
+      'Warlock' : "<img src='/images/Warlock.jpg'>",
       'Wizard' : "<img src='/images/Wizard.jpg'>"
     }
     $(".char-img-div").find("img").replaceWith(charImgObj[charClass]);
