@@ -17,7 +17,7 @@ get '/users/:user_id/characters/new' do
 
   if request.xhr?
 
-    @race = "Human"
+    @race = params["race"]
 
     @api = HTTParty.get("http://5e-api.com/v1/races/#{@race}")
 

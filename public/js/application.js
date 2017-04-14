@@ -92,11 +92,17 @@ var showBonusListener = function(){
     var $request = $.ajax({
       type: "GET",
       url: window.location.pathname,
-      data: charRace
+      data: { "race": charRace }
     })
 
     $request.done(function(response){
-      console.log(response)
+      $(".stat-bonus").text("   ")
+
+      var bonusesObj = JSON.parse(response);
+      for (var bonusAttr in bonusesObj) {
+        var bonusVal = bonusesObj[bonusAttr];
+        $("#" + bonusAttr).append("+ " + bonusVal)
+      }
     })
   });
 }
