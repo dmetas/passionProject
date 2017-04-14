@@ -73,8 +73,6 @@ a {
 
 th{
   text-align: left;
-  vertical-align: top;
-  padding-top: 5px;
 }
 
 .new-char-stat{
@@ -97,4 +95,8 @@ th{
   width:48%;
   text-align: right;
   margin: 10px;
+}
+
+.stat-bonus{
+  color:red;
 }
