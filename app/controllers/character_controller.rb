@@ -33,25 +33,29 @@ get '/users/:user_id/characters/:id/edit' do
 end
 
 put '/users/:user_id/characters/:id/upvote' do
-  p "*" * 100
-  p params
   @user = User.find(params[:user_id])
   @character = Character.find(params[:id])
-  @attribute = params[:attribute]
+  @new_val = (@character.read_attribute params[:attribute]) + 1
+  @character.update(params[:attribute] => @new_val)
 
-  @new_val = (@character[@attribute] + 1)
-  @character.update({ @attribute => @new_val})
-  redirect "/users/#{@user.id}/characters/#{@character.id}"
+  if request.xhr?
+    @new_val.to_s
+  else
+    redirect "/users/#{@user.id}/characters/#{@character.id}"
+  end
 end
 
 put '/users/:user_id/characters/:id/downvote' do
   @user = User.find(params[:user_id])
   @character = Character.find(params[:id])
-  @attribute = params[:attribute]
+  @new_val = (@character.read_attribute params[:attribute]) - 1
+  @character.update(params[:attribute] => @new_val)
 
-  @new_val = (@character[@attribute] - 1)
-  @character.update({ @attribute => @new_val})
-  redirect "/users/#{@user.id}/characters/#{@character.id}"
+  if request.xhr?
+    @new_val.to_s
+  else
+    redirect "/users/#{@user.id}/characters/#{@character.id}"
+  end
 end
 
 delete '/users/:user_id/characters/:id' do
