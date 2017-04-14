@@ -49,8 +49,11 @@ a {
   color:#801505
 }
 
-.page-header h1 a{
+.page-header h1, h2{
   color:#801505;
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Cinzel Decorative', cursive;
 }
 
 #logout-button{
@@ -82,7 +85,7 @@ th{
 
 .dragon-img{
   display: block;
-  margin: 10% 20%;
+  margin: 5% 15%;
   vertical-align: middle;
 }
 
