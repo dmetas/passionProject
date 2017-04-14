@@ -91,9 +91,12 @@ var showBonusListener = function(){
 
     var $request = $.ajax({
       type: "GET",
-      url: 'http://5e-api.com/v1/races/' + charRace
+      url: window.location.pathname,
+      data: charRace
     })
 
-    console.log($request)
+    $request.done(function(response){
+      console.log(response)
+    })
   });
 }
