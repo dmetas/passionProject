@@ -41,3 +41,8 @@
   </tr>
 </table>
 <p>Background: <%=@character.background%></p>
+
+<form id="delete-char-form" action="/users/<%= @user.id %>/characters/<%= @character.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete Character" id="delete-char-button">
+</form>

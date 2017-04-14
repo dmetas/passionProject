@@ -59,6 +59,9 @@ put '/users/:user_id/characters/:id/downvote' do
 end
 
 delete '/users/:user_id/characters/:id' do
-
+  @user = User.find(params[:user_id])
+  @character = Character.find(params[:id])
+  @character.destroy
+  redirect "/users/#{@user.id}"
 end
 
