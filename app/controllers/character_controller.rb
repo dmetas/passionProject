@@ -33,18 +33,24 @@ get '/users/:user_id/characters/:id/edit' do
 end
 
 put '/users/:user_id/characters/:id/upvote' do
+  p "*" * 100
+  p params
   @user = User.find(params[:user_id])
   @character = Character.find(params[:id])
-  @new_val = (@character.level + 1)
-  @character.update({level: @new_val})
+  @attribute = params[:attribute]
+
+  @new_val = (@character[@attribute] + 1)
+  @character.update({ @attribute => @new_val})
   redirect "/users/#{@user.id}/characters/#{@character.id}"
 end
 
 put '/users/:user_id/characters/:id/downvote' do
   @user = User.find(params[:user_id])
   @character = Character.find(params[:id])
-  @new_val = (@character.level - 1)
-  @character.update({level: @new_val})
+  @attribute = params[:attribute]
+
+  @new_val = (@character[@attribute] - 1)
+  @character.update({ @attribute => @new_val})
   redirect "/users/#{@user.id}/characters/#{@character.id}"
 end
 

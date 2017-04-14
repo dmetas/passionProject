@@ -12,26 +12,32 @@
   <tr>
     <td>strength</td>
     <td><%=@character.strength%></td>
+    <td><%= erb :'characters/_arrows', locals: { attribute: 'strength', attribute_val: @character.level, character: @character } %></td>
   </tr>
   <tr>
     <td>dexterity</td>
     <td><%=@character.dexterity%></td>
+    <td><%= erb :'characters/_arrows', locals: { attribute: 'dexterity', attribute_val: @character.level, character: @character } %></td>
   </tr>
   <tr>
     <td>constitution</td>
     <td><%=@character.constitution%></td>
+    <td><%= erb :'characters/_arrows', locals: { attribute: 'constitution', attribute_val: @character.level, character: @character } %></td>
   </tr>
   <tr>
     <td>intelligence</td>
     <td><%=@character.intelligence%></td>
+    <td><%= erb :'characters/_arrows', locals: { attribute: 'intelligence', attribute_val: @character.level, character: @character } %></td>
   </tr>
   <tr>
     <td>wisdom</td>
     <td><%=@character.wisdom%></td>
+    <td><%= erb :'characters/_arrows', locals: { attribute: 'wisdom', attribute_val: @character.level, character: @character } %></td>
   </tr> 
   <tr>
     <td>charisma</td>
     <td><%=@character.charisma%></td>
+    <td><%= erb :'characters/_arrows', locals: { attribute: 'charisma', attribute_val: @character.level, character: @character } %></td>
   </tr>
 </table>
 <p>Background: <%=@character.background%></p>
