@@ -3,6 +3,7 @@ $(document).ready(function() {
   downVoteListener();
   deleteCharListener();
   updatePhotoListener();
+  showBonusListener();
 });
 
 var upVoteListener = function(){
@@ -80,5 +81,19 @@ var updatePhotoListener = function(){
       'Wizard' : "<img src='/images/warlock.jpg'>"
     }
     $(".char-img-div").find("img").replaceWith(charImgObj[charClass]);
+
   })
+}
+
+var showBonusListener = function(){
+  $("#new-char-race").on("change", function(){
+    var charRace = $(this).val();
+
+    var $request = $.ajax({
+      type: "GET",
+      url: 'http://5e-api.com/v1/races/' + charRace
+    })
+
+    console.log($request)
+  });
 }
