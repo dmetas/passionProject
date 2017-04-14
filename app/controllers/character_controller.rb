@@ -62,6 +62,10 @@ delete '/users/:user_id/characters/:id' do
   @user = User.find(params[:user_id])
   @character = Character.find(params[:id])
   @character.destroy
-  redirect "/users/#{@user.id}"
+  if request.xhr?
+    @user.id.to_s
+  else
+    redirect "/users/#{@user.id}"
+  end
 end
 
