@@ -68,7 +68,7 @@ var updatePhotoListener = function(){
     var charClass = $(this).val();
     var charImgObj = {
       'Barbarian' : "<img src='/images/Barb.jpg'>",
-      'Bard' : "<img src='/images/Barb.jpg'>",
+      'Bard' : "<img src='/images/Bard.jpg'>",
       'Cleric' : "<img src='/images/cleric.jpg'>",
       'Druid' : "<img src='/images/druid.jpg'>",
       'Fighter' : "<img src='/images/fighter.jpg'>",
@@ -78,7 +78,7 @@ var updatePhotoListener = function(){
       'Rogue' : "<img src='/images/Rogue.jpg'>",
       'Sorcerer' : "<img src='/images/sorcerer.jpg'>",
       'Warlock' : "<img src='/images/warlock.jpg'>",
-      'Wizard' : "<img src='/images/warlock.jpg'>"
+      'Wizard' : "<img src='/images/Wizard.jpg'>"
     }
     $(".char-img-div").find("img").replaceWith(charImgObj[charClass]);
 

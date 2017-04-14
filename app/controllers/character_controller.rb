@@ -45,7 +45,7 @@ get '/users/:user_id/characters/:id' do
 
   class_img_hash = {
       'Barbarian' => "/images/Barb.jpg",
-      'Bard' => "/images/Barb.jpg",
+      'Bard' => "/images/Bard.jpg",
       'Cleric' => "/images/cleric.jpg",
       'Druid' => "/images/druid.jpg",
       'Fighter' => "/images/fighter.jpg",
@@ -55,7 +55,7 @@ get '/users/:user_id/characters/:id' do
       'Rogue' => "/images/Rogue.jpg",
       'Sorcerer' => "/images/sorcerer.jpg",
       'Warlock' => "/images/warlock.jpg",
-      'Wizard' => "/images/warlock.jpg"
+      'Wizard' => "/images/Wizard.jpg"
     }
 
     @class_img = class_img_hash[char_class]
