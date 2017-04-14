@@ -6,6 +6,11 @@ body{
   /*background-image: url("/images/stone-background-1.jpg");*/
 }
 
+img.resize{
+   max-width:75%;
+   max-height:75%;
+}
+
 nav{
   text-align: right;
 }
