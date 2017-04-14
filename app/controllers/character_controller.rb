@@ -14,6 +14,12 @@ get '/users/:user_id/characters/new' do
   @stat_roll4 = stat_roll
   @stat_roll5 = stat_roll
   @stat_roll6 = stat_roll
+
+  # @racial_bonuses = []
+  # http://5e-api.com/v1/races/{race}
+  # grab value of "racial_bonus" key (value is an array of hashes)
+  # for each stat on the form, check for racial bonus and display
+  
   erb :'/characters/new'
 end
 
