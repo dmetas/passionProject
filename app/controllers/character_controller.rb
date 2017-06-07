@@ -36,13 +36,13 @@ post '/users/:user_id/characters' do
 
     @race = @character.race
 
-    @api = HTTParty.get("http://5e-api.com/v1/races/#{@race}")
+    @api = [0]
 
-    @racial_bonuses_array = @api[0]["racial_bonus"]
+    @racial_bonuses_array = @api
     @racial_bonuses_hash = Hash.new
 
     @racial_bonuses_array.each do |hash| 
-      @racial_bonuses_hash[hash["name"]] = hash["bonus"]
+      # @racial_bonuses_hash[hash["name"]] = hash["bonus"]
     end
     
     @racial_bonuses_hash.each do |key, value|
